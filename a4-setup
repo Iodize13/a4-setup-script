@@ -1,0 +1,11 @@
+#!/bin/sh
+mkdir -p $HOME/.local/src &&
+cd $HOME/.local/src &&
+git clone https://github.com/martanne/abduco &&
+cd abduco &&
+sudo make clean install &&
+cd .. &&
+git clone https://github.com/rpmohn/a4 &&
+cd a4 &&
+make && sudo make install
+cat 
