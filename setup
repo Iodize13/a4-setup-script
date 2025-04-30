@@ -1,4 +1,6 @@
 #!/bin/sh
+
+paru -S libtickit
 mkdir -p $HOME/.local/src &&
 cd $HOME/.local/src &&
 git clone https://github.com/martanne/abduco &&
@@ -7,5 +9,9 @@ sudo make clean install &&
 cd .. &&
 git clone https://github.com/rpmohn/a4 &&
 cd a4 &&
-make && sudo make install
-cat 
+make && sudo make install &&
+mkdir -p $HOME/.config/a4 &&
+curl -i https://github.com/iodize13/a4-setup-script/blob/main/a4.ini > $HOME/.config/a4 &&
+echo "alias a4='abduco -A my-session a4'" >> $HOME/.bashrc &&
+source $HOME/.bashrc &&
+abduco -A my-session a4
