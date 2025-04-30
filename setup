@@ -10,6 +10,7 @@ git clone https://github.com/rpmohn/a4 &&
 cd a4 &&
 make && sudo make install &&
 mkdir -p $HOME/.config/a4 &&
-curl "https://raw.githubusercontent.com/Iodize13/a4-setup-script/refs/heads/main/a4.ini" > $HOME/.config/a4/a4.ini &&
+curl "https://raw.githubusercontent.com/Iodize13/a4-setup-script/main/a4.ini" > $HOME/.config/a4/a4.ini &&
+https://raw.githubusercontent.com/Iodize13/a4-setup-script/main/setup
 echo "alias a4='abduco -A my-session a4'" >> $HOME/.bashrc &&
 abduco -A my-session a4
